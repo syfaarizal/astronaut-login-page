@@ -5,20 +5,18 @@ A responsive, split-screen login page featuring a modern aesthetic, custom asset
 ## 🚀 Features
 
 - #### Responsive Split-Screen Design:
-
- - **Desktop**: Full-width layout with a visual sidebar on the left and a login form on the right.
-
- - **Mobile**: The visual sidebar automatically hides to prioritize the login form for smaller screens.
+  - **Desktop**: Full-width layout with a visual sidebar on the left and a login form on the right.
+  - **Mobile**: The visual sidebar automatically hides to prioritize the login form for smaller screens.
 
 - **Custom Assets**: Integrates a specific astronaut illustration (```bg-astronaut-lp.jpg```) as the primary visual.
 
 - #### Interactive UI:
 
- - **Password Toggle**: Users can show/hide their password visibility using the eye icon.
+  - **Password Toggle**: Users can show/hide their password visibility using the eye icon.
 
- - **Loading State**: The login button displays a spinner animation during form submission simulation.
+  - **Loading State**: The login button displays a spinner animation during form submission simulation.
 
- - **Floating Inputs**: Focus states with custom branding colors.
+  - **Floating Inputs**: Focus states with custom branding colors.
 
 - **Modern Styling**: Built with **Tailwind CSS** for utility-first styling and **FontAwesome** for icons.
 
