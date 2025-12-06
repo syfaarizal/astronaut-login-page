@@ -1,0 +1,30 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #7E2553;
+    box-shadow: 0 0 0 3px rgba(126, 37, 83, 0.1);
+}
+
+.custom-checkbox:checked {
+    background-color: #7E2553;
+    border-color: #7E2553;
+}
+
+.loader {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #ffffff;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 1s linear infinite; 
+    animation: spin 1s linear infinite;
+    display: none; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Welcome Back</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <div class="flex min-h-screen w-full">
+        <div class="hidden lg:flex w-1/2 bg-cover bg-center relative items-end pb-20 px-10" 
+             style="background-image: url('./assets/img/bg-astronaut-lp.png');">
+            <div class="absolute inset-0 bg-brand-primary/10"></div>
+        </div>
+
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-6 bg-white relative">
+            <div class="absolute top-10 right-10 text-brand-primary opacity-20 hidden sm:block">
+                <i class="fa-solid fa-shapes fa-2x"></i>
+            </div>
+
+            <div class="w-full max-w-md space-y-8">
+                
+                <div class="text-left">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-primary mb-6">
+                        <i class="fa-solid fa-infinity fa-2x"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-brand-primary">Welcome Back</h2>
+                    <p class="mt-2 text-sm text-brand-primary">Login to your account</p>
+                </div>
+
+                <form id="loginForm" class="mt-8 space-y-6" onsubmit="handleLogin(event)">
+                    <div class="space-y-5">
+                        
+                        <div class="input-group">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required placeholder="mail@abc.com"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 text-sm transition duration-200 placeholder-gray-400">
+                        </div>
+
+                        <div class="input-group relative">
+                            <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                            <div class="relative">
+                                <input id="password" name="password" type="password" required placeholder="••••••••"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 text-sm transition duration-200 placeholder-gray-400 pr-10">
+                                
+                                <button type="button" onclick="togglePassword()" 
+                                    class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-brand-primary transition">
+                                    <i id="eyeIcon" class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input id="remember-me" name="remember-me" type="checkbox" 
+                                    class="h-4 w-4 text-brand-primary focus:ring-brand-primary border-gray-300 rounded custom-checkbox cursor-pointer">
+                                <label for="remember-me" class="ml-2 block text-sm text-gray-500 cursor-pointer">Remember Me</label>
+                            </div>
+
+                            <div class="text-sm">
+                                <a href="#" class="font-medium text-brand-primary hover:text-brand-light transition">Forgot Password?</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="submitBtn"
+                            class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-brand-primary hover:bg-brand-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary shadow-lg shadow-brand-primary/30 transition-all duration-300 transform hover:-translate-y-0.5">
+                            <span id="btnText">Login</span>
+                            <div id="btnLoader" class="loader ml-2"></div>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="relative my-6">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-200"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-white text-gray-500">Or continue with</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="flex items-center justify-center w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="h-5 w-5 mr-2" alt="Google">
+                        Google
+                    </button>
+                    <button class="flex items-center justify-center w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                        <i class="fa-brands fa-facebook text-blue-600 text-lg mr-2"></i>
+                        Facebook
+                    </button>
+                </div>
+
+                <p class="mt-8 text-center text-sm text-gray-600">
+                    Not Registered Yet? 
+                    <a href="#" class="font-medium text-brand-primary hover:text-brand-light hover:underline transition">Create an account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/index.js"></script>
+</html>
